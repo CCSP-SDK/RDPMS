@@ -1,4 +1,4 @@
-site_name: RDPMS (Railway Data Processing Management System) Guide
+site_name: RDPMS (Remote Diagnostics and Predictive Maintenance Solutions) Guide
 
 extra_css:
   - css/styles.css
@@ -57,7 +57,7 @@ theme:
         name: Switch to light mode
       primary: blue
       accent: pink 
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode    
@@ -90,5 +90,24 @@ copyright: |
 
 
 nav:
-  - Home: 
-    - 'index.md'
+  - Home:
+      - 'index.md'  
+      - About CCSP: 
+          - 'rdpms/ccsp/index.md'  
+      - About RDPMS: 
+          - 'rdpms/index.md'  
+      - RDPMS Architecture:
+          - 'rdpms/architecture/index.md'  
+      - RDPMS API Reference:
+          - 'rdpms/api/index.md'  
+  - RDPMS Data Formats:
+      - 'rdpmsDataFormats/index.md'  
+      - Diagnostics Payloads:
+          - 'rdpmsDataFormats/diagnosticPayloads/index.md'  
+      - Maintenance Payloads:
+          - 'rdpmsDataFormats/maintenancePayloads/index.md'  
+      - Predictive Analytics Payloads:
+          - 'rdpmsDataFormats/predictiveAnalyticsPayloads/index.md'  
+      - Common Errors and Resolution:
+          - 'rdpmsDataFormats/commonErrorsResolutions/index.md'  
+  
