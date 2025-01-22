@@ -1,0 +1,94 @@
+site_name: RDPMS (Railway Data Processing Management System) Guide
+
+extra_css:
+  - css/styles.css
+
+extra_javascript:
+  - js/script.js
+
+extra:
+  generator: false           #this for removing the copyright of mkdocs material theme in footer
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Please let us know how we can improve this page.
+
+theme:
+
+  name: material
+
+  # custom_dir: 'overrides'            # //not working
+
+  logo: 'images/cdot_logo.png'
+
+  features:
+    - content.code.annotate 
+    - content.code.copy
+    # - navigation.footer             # //this for removal of horizontal navigation at footer
+    - content.footnote.tooltips
+    - navigation.indexes
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.suggest
+    - search.highlight
+    - search.share
+    # - toc.integrate                # //this for getting toc 
+
+  language: en
+
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to light mode
+      primary: blue
+      accent: pink 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode    
+      primary: indigo
+      accent: pink  
+
+
+plugins:
+  - search
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/pootrivs"  target="_blank" rel="noopener">Centre for Development of Telematics</a>
+
+
+nav:
+  - Home: 
+    - 'index.md'
