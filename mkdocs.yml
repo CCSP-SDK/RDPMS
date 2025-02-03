@@ -1,4 +1,4 @@
-site_name: RDPMS (Remote Diagnostics and Predictive Maintenance Solutions) Guide
+site_name: RDPMS (Remote Diagnostics and Predictive Maintenance Solutions) Guide 
 
 extra_css:
   - css/styles.css
@@ -8,26 +8,12 @@ extra_javascript:
 
 extra:
   generator: false           #this for removing the copyright of mkdocs material theme in footer
-  analytics:
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Thanks for your feedback! Please let us know how we can improve this page.
-
+  
 theme:
 
   name: material
 
-  # custom_dir: 'overrides'            # //not working
+  # custom_dir: 'overrides'            
 
   logo: 'images/cdot_logo.png'
 
@@ -93,21 +79,18 @@ nav:
   - Home:
       - 'index.md'  
       - About CCSP: 
-          - 'rdpms/ccsp/index.md'  
-      - About RDPMS: 
-          - 'rdpms/index.md'  
+        - 'home/ccsp/index.md'  
+  - About RDPMS:
+      - 'aboutRdpms/index.md' 
       - RDPMS Architecture:
-          - 'rdpms/architecture/index.md'  
-      - RDPMS API Reference:
-          - 'rdpms/api/index.md'  
-  - RDPMS Data Formats:
-      - 'rdpmsDataFormats/index.md'  
-      - Diagnostics Payloads:
-          - 'rdpmsDataFormats/diagnosticPayloads/index.md'  
-      - Maintenance Payloads:
-          - 'rdpmsDataFormats/maintenancePayloads/index.md'  
-      - Predictive Analytics Payloads:
-          - 'rdpmsDataFormats/predictiveAnalyticsPayloads/index.md'  
-      - Common Errors and Resolution:
-          - 'rdpmsDataFormats/commonErrorsResolutions/index.md'  
-  
+          - 'aboutRdpms/architecture/index.md'  
+      - RDPMS CCSP Integration:
+          - 'aboutRdpms/ccspIntegration/index.md'  
+      - Station Gateways:
+          - 'aboutRdpms/stationGateways/index.md'
+  - RDPMS Standard Data Formats:
+      - 'rdpmsStandardDataFormats/index.md'  
+      - Station Gateway Hirearchy:
+          - 'rdpmsStandardDataFormats/stationGatewayHirearchy/index.md'
+      - Station Gateway Data Format:
+          - 'rdpmsStandardDataFormats/stationGatewayDataFormat/index.md'  
