@@ -1,10 +1,16 @@
-/* Ensure that anchor links look nice */
-a {
+  /* Ensure that anchor links look nice */
+  a{
     color: blue !important;
   }
   a:visited {
     color: purple !important;
   }
+  
+
+  .md-content {
+    margin-left: -30px; /* Adjust the margin as needed */
+  }
+
 
   /* Make sure the logos are centered and sized correctly */
   .md-header__button.md-logo {
@@ -15,13 +21,13 @@ a {
     padding-top: 2px;
     padding-bottom: 2px;
   }
-  
+
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
     height: 30%;
     width: 30%;
   }
-  
+
   .md-header__button.md-logo::after {
     content: '';
     background-image: url('../images/ccsp_logo.png');
@@ -32,7 +38,7 @@ a {
     height: 50px;
     margin-left: 10px;
   }
-  
+
   /* For smaller screens (phones and tablets) */
   @media (max-width: 768px) {
     .md-header__button.md-logo {
@@ -43,24 +49,24 @@ a {
       margin: 0;
       padding: 10px;
     }
-  
+
     .md-header__button.md-logo img {
       height: 40px;
       width: auto;
     }
-  
+
     .md-header__button.md-logo::after {
       width: 50px;
       height: 40px;
       margin-left: 5px;
     }
-  
+
     .md-header__title {
       font-size: 14px;
       text-align: center;
       margin: 0 auto;
     }
-  
+
     .md-nav {
       display: flex;
       flex-direction: column;
@@ -71,25 +77,25 @@ a {
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
     }
-  
+
     .md-nav li {
       white-space: normal;
       word-wrap: break-word;
       max-width: 100%; /* Allow full use of available width */
       text-overflow: ellipsis; /* Add ellipsis for overflowing text */
     }
-  
+
     .md-nav li a {
       word-wrap: break-word;
       max-width: 90%; /* Ensure no overflow and text wrapping */
       display: block;
     }
-  
+
     .md-header__search, .md-header__button.md-icon {
       flex-shrink: 0;
       margin-left: auto;
     }
-  
+
     /* Ensure the back arrow is visible on mobile */
     .md-nav .back-arrow {
       position: absolute;
@@ -98,14 +104,14 @@ a {
       font-size: 16px;
       z-index: 20;
     }
-  
+
     /* Handle overflow and scrolling */
     .md-nav {
       max-height: 100vh;
       overflow-y: auto;
     }
   }
-  
+
   /* For very small screens (phones in portrait mode) */
   @media (max-width: 480px) {
     .md-header__button.md-logo {
@@ -113,46 +119,45 @@ a {
       justify-content: center;
       padding: 5px;
     }
-  
+
     .md-header__button.md-logo img {
       height: 35px;
       margin-right: 5px;
     }
-  
+
     .md-header__button.md-logo::after {
       width: 40px;
       height: 35px;
       margin-left: 5px;
     }
-  
+
     .md-header__title {
       font-size: 12px;
       text-align: center;
     }
-  
+
     .md-nav {
       padding: 5px;
     }
-  
+
     .md-header__search, .md-header__button.md-icon {
       flex-shrink: 0;
       margin-left: auto;
     }
   }
-  
+
   /* Ensure the logo is not hidden behind the hamburger menu */
   @media (max-width: 768px) {
     .md-header__button.md-logo {
       position: relative;
       z-index: 10;
     }
-  
+
     .md-header__title {
       margin-left: 0;
     }
-  
+
     .md-header__button.md-icon {
       margin-left: auto;
     }
   }
-  
