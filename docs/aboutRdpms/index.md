@@ -12,9 +12,3 @@ It enhance the reliability and efficiency of equipment, helping to prevent costl
 ```
 
 <p>For more details, please visit the <a href="https://docs.google.com/document/d/1cE9JMSqpLdfA3ZbQ7_uuH78NSWcDUhBA/edit?usp=sharing&ouid=118122802747448962476&rtpof=true&sd=true" target="_blank">RDPMS Standard Data Format</a> Document.</p>
-
-
-## RDPMS Message Communication Flow
-
-![RDPMS Message Communication Flow](../images/rdpms_message_flow.png)
-
