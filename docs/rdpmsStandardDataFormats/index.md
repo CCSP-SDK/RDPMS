@@ -1,81 +1,72 @@
 # RDPMS Standard Data Formats
 
-Welcome to the RDPMS Standard Data Formats documentation. This page provides an overview of the various payload formats used within the RDPMS system for remote diagnostic and predictive maintenance solutions.
+## Overview
+This page provides an overview of the various payload formats used within the **RDPMS system**. It follows **oneM2M standard data formats** to ensure **interoperability** between Station Gateways, IoT devices, sensors, and Application Software. These standards enable seamless communication between application software of different OEMs.
 
-## Table of Contents
+???+ question "Why oneM2M Standards?"
+    The **oneM2M standard** ensures a unified framework for IoT/M2M communication, making sure different devices and software solutions from multiple vendors can work together without compatibility issues.
 
-- [Introduction](#introduction)
-- [Payload Specifications](#payload-specifications)
-- [Examples](#examples)
-- [Best Practices](#best-practices)
-- [Resources](#resources)
+**Note**: Vendors should acquire a basic understanding of **oneM2M standards**. [Refer to oneM2M Guidelines](https://coi.cdot.in/docs/oneM2MGuideline.html).
 
-## Introduction
+## Data Flow & Containers in CCSP Layer
 
-The RDPMS (Remote Diagnostic Predictive Maintenance Solutions) system utilizes specific payload formats to ensure consistency, reliability, and efficiency in data processing and management. This documentation outlines these formats and provides guidelines for their usage.
+### How Data is Organized
+The **CCSP Layer** (C-DOT Common Service Platform) organizes data using **containers**. These containers act as storage units where **data instances** are managed.
 
-## Payload Specifications
+???+ tip "Container Data Flow"
+    - **Containers** are created by the **Station Gateway** in the CCSP Layer.
+    - **Data Instances** are sent by the **Station Gateway** to these containers.
+    - **Applications & Other Entities** subscribe to these containers to receive notifications when new data instances are added.
 
-### Diagnostic Payloads
+### Bidirectional Communication
+- The **Application Software** can also create data instances in certain containers.
+- The **Station Gateway** subscribes to these containers and receives data instances as notifications.
 
-Details about the structure and content of diagnostic payloads.
+### Role of CCSP Layer
 
-### Predictive Maintenance Payloads
+???+ info "Authentication & Data Integrity"
+    - Ensures that **only authenticated devices** can send or receive data.
+    - Verifies that data follows **oneM2M standard formats** before forwarding it to RDPMS Application Software.
 
-Details about the structure and content of predictive maintenance payloads.
+## Types of Containers in Standard Data Format
 
-### Alert Payloads
+???+ example "Different Containers"
+    - ### <u>**Station Gateway Connect Container**</u>: 
+    Created by the station gateway on the CCSP Layer, subscribed by the cloud app. It notifies the application software when a station gateway connects, reboots, or recovers from a power failure.
 
-Details about the structure and content of alert payloads.
+    - ### <u>**Station Gateway Information Container**</u>: 
+    Created by the station gateway on the CCSP Layer, subscribed by the cloud app. It sends installation details and updates when sensors/IoT devices are added or removed. This occurs at least once a month and should be configurable.
 
-## Examples
+    - ### <u>**Registration Process**</u>: 
+    An initial copy of information container data is uploaded by a railway admin via an Excel sheet. The application software cross-checks data received from the station gateway against the uploaded data and provides an error message if inconsistencies exist.
 
-### Diagnostic Payload Example
+    - ### <u>**Image Container**</u>: 
+    Created by the station gateway, subscribed by the cloud app. It provides a snapshot of all parameter values at a defined interval (default: 24 hours, configurable).
 
-```json
-{
-    "deviceId": "12345",
-    "timestamp": "2023-10-01T12:00:00Z",
-    "diagnosticData": {
-        "temperature": 75,
-        "vibration": 0.02
-    }
-}
-```
+    - ### <u>**Parameter Container**</u>: 
+    Created by the station gateway, subscribed by the cloud app. It sends data when: a parameter changes by ±2% in the last 5 seconds or specific parameters (e.g., voltage/current of certain equipment) are sampled every 20 ms over 5 seconds or a packet is sent every 5 seconds with these values.
 
-### Predictive Maintenance Payload Example
+    - ### <u>**Diagnostic Container**</u>: 
+    Created by the station gateway, subscribed by the cloud app. It reports the health status of all sensors/IoT devices when a fault occurs or at a configurable interval (default: 12 hours).
 
-```json
-{
-    "deviceId": "12345",
-    "timestamp": "2023-10-01T12:00:00Z",
-    "maintenancePrediction": {
-        "component": "motor",
-        "predictedFailureDate": "2023-12-01"
-    }
-}
-```
+    - ### <u>**Time Sync Container**</u>: 
+    Created and subscribed by the station gateway. The application software writes to it, sending a time synchronization request to the station gateway at first connection or at a configurable interval (default: 24 hours).
 
-### Alert Payload Example
+    - ### <u>**Time Sync Acknowledgment Container**</u>: 
+    Created by the station gateway, subscribed by the cloud app. It sends an acknowledgment after the time sync process is completed.
 
-```json
-{
-    "deviceId": "12345",
-    "timestamp": "2023-10-01T12:00:00Z",
-    "alertType": "temperature",
-    "alertLevel": "high"
-}
-```
+    - ### <u>**Configuration Container**</u>: 
+    Created and subscribed by the station gateway. The application software writes configuration updates, which are then received by the station gateway.
 
-## Best Practices
+    - ### <u>**Configuration Acknowledgment Container**</u>: 
+    Created by the station gateway, subscribed by the cloud app. It sends an acknowledgment once a configuration update is processed.
 
-- Ensure data consistency by adhering to the specified payload formats.
-- Validate payloads to prevent errors during processing.
-- Use appropriate data types for each field.
+    - ### <u>**Station Gateway Status Container**</u>: 
+    Created by the CCSP Layer. The station gateway sends an initial content instance to inform CCSP that all containers have been created, allowing access control policies to be activated.
 
-## Resources
-
-- [JSON Documentation](https://www.json.org/json-en.html)
-- [RDPMS Official Documentation](#)
-
-For further assistance, please refer to the official RDPMS documentation or contact support.
+## Key Takeaways
+- The **RDPMS system** uses **oneM2M-compliant data formats** to standardize railway IoT communication.
+- **CCSP Layer** plays a crucial role in **device authentication**, **data integrity**, and **subscription-based data flow**.
+- Data can flow **bidirectionally** between Station Gateways and Application Software.
+- **CCSP is hosted in the Railway Cloud** for enhanced security and interoperability.
+- The adoption of oneM2M standards enhances **data security, interoperability, and reliability** of RDPMS across multiple vendors and systems.

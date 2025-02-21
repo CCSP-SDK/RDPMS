@@ -1,20 +1,25 @@
-# About Station Gateways
+# Station Gateway Overview
 
-## Station Gateway Overview
-At each station, there shall be one embedded electronic unit called **Station Gateway**. It shall:
+## Introduction
+The **Station Gateway** is an embedded electronic unit deployed at each station to facilitate data acquisition, processing, and communication with the **RDPMS Application Software** hosted on the **Railway Cloud** via the **CCSP Layer**.
 
-- Receive raw data/parameter values from **Sensors** through IoT devices.
-- Collect data from **diagnostic ports** of various equipment for **Signalling assets**.
-- Transmit data to the **RDPMS Application software** hosted at the **Railway cloud** via the **CCSP Layer** (C-DOT Common Service Platform).
-- Use **Standard oneM2M Data format** and **MQTT Protocol** for communication.
-- Function as an **Edge Computing Device** at the station.
+## Key Functions
+- Receives data from **sensors** and **diagnostic ports** of station equipment.
+- Converts and transmits data using **oneM2M Standard Data Format** and **MQTT Protocol**.
+- Ensures **interoperability** across different vendor systems through standardized communication.
+- Provides **event logging** to store up to **5 million events** or a **minimum of 10 days** of data.
+- Supports **secure data transmission** and **remote access capabilities**.
 
-## Features of Station Gateway
-- **Inbuilt Protocol Converters**: Ensuring connectivity with:
-  - Datalogger
-  - IPS (Integrated Power Supply)
-  - Other equipment as referenced in clauses **3.3 & 4** of this document.
-- **Diagnostic Features**: Allows monitoring and troubleshooting.
-- **Configuration Capabilities**: Details are provided in **Annexure A & B**.
+## Communication & Security
+- Converts data into **oneM2M format** before transmitting it to the **CCSP Layer**.
+- Supports various transmission media, including **OFC, Ethernet, wireless networks, and voice channels**.
+- Includes **12 configurable serial ports** for communication with station equipment.
+- Implements **data security measures** to prevent unauthorized access.
+- Complies with **TEC IoT Security Guidelines** and undergoes periodic cybersecurity audits.
 
+
+## Conclusion
+
+???+ example "Quick Summary"
+    This **Station Gateway** serves as the critical interface between station-level data sources and the **CCSP Layer**, ensuring efficient, standardized, and secure data communication within the **RDPMS ecosystem**.
 

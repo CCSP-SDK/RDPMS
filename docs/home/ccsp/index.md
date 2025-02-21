@@ -2,7 +2,7 @@
 
 C-DOT has developed a **state-of-the-art, oneM2M-compliant C-DOT's Common Service Platform (CCSP)**, which facilitates **standards-based IoT solutions deployment** across the country.
 
-## **What is CCSP?**
+## What is CCSP?
 CCSP is an **indigenously developed IoT platform** based on the **oneM2M standard**, which has been declared the **National Standard on IoT/M2M by TEC**. It acts as a **horizontal common service layer for IoT/M2M**, offering a set of **Common Service Functions (CSFs)** required by various IoT verticals.
 
 
@@ -17,8 +17,8 @@ CCSP is an **indigenously developed IoT platform** based on the **oneM2M standar
     ```
 
 ---
-## **Features of CCSP**
-### **Supported Common Service Functions**
+## Features of CCSP
+### Supported Common Service Functions
 
 C-DOT's **Common Service Platform (CCSP)** supports **11 Common Service Functions (CSFs)**, which provide a standardized foundation for IoT/M2M applications. These include:
 
@@ -36,23 +36,23 @@ C-DOT's **Common Service Platform (CCSP)** supports **11 Common Service Function
 
 ---
 
-### **Advanced Features**
+### Advanced Features
 
 In addition to the core CSFs, CCSP offers a range of **advanced features** designed to enhance IoT/M2M interoperability and efficiency:
 
-#### **Interworking and Connectivity**
+#### Interworking and Connectivity
 - **3GPP Interworking for NIDD (Non-IP Data Delivery)** for **NB-IoT (Narrow Band IoT) Devices**
   - Supports **3GPP T8 interface**
 - **Support for MN (Middle Node) and ASN (Access Service Node)**
 - **SSP (Service Subscription Provider) Restrictions**
 
-#### **Data and Device Management**
+#### Data and Device Management
 - **Flex Container** for structured and flexible data storage
 - **Field Device Configuration**
 - **Device Management over LWM2M (Lightweight M2M) Protocol and TR-069**
 - **Service Subscription Management**
 
-#### **Intelligent Data Handling**
+#### Intelligent Data Handling
 - **Semantics-based Data Interpretation**
 - **Time Series Data Handling**
 - **Transaction Management**
@@ -60,7 +60,7 @@ In addition to the core CSFs, CCSP offers a range of **advanced features** desig
 
 ---
 
-## **Benefits for IoT Application Providers**
+## Benefits for IoT Application Providers
 - Simplifies integration by hiding the complexity of: 
 ```yaml
   - Secure communication
@@ -71,5 +71,5 @@ and ensures smooth interoperability across different IoT verticals through stand
 
 ---
 
-## **Quick Summary**
+## Quick Summary
 The **C-DOT's Common Service Platform** is a robust, standards-based platform designed to **empower IoT/M2M applications**, which provides seamless and **secure IoT/M2M deployments**, ensuring **scalability, interoperability, and reliability** across diverse verticals.
