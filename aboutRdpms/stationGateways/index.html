@@ -20,7 +20,7 @@
     
     
       
-        <title>Index - RDPMS (Remote Diagnostics and Predictive Maintenance Solutions) Guide</title>
+        <title>About Station Gateways - RDPMS (Remote Diagnostics and Predictive Maintenance Solutions) Guide</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#about-station-gateways" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              About Station Gateways
             
           </span>
         </div>
@@ -694,6 +699,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#station-gateway-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Station Gateway Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-of-station-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features of Station Gateway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -709,9 +742,25 @@
 
 
 
-  <h1>Index</h1>
-
-
+<h1 id="about-station-gateways">About Station Gateways</h1>
+<h2 id="station-gateway-overview">Station Gateway Overview</h2>
+<p>At each station, there shall be one embedded electronic unit called <strong>Station Gateway</strong>. It shall:</p>
+<ul>
+<li>Receive raw data/parameter values from <strong>Sensors</strong> through IoT devices.</li>
+<li>Collect data from <strong>diagnostic ports</strong> of various equipment for <strong>Signalling assets</strong>.</li>
+<li>Transmit data to the <strong>RDPMS Application software</strong> hosted at the <strong>Railway cloud</strong> via the <strong>CCSP Layer</strong> (C-DOT Common Service Platform).</li>
+<li>Use <strong>Standard oneM2M Data format</strong> and <strong>MQTT Protocol</strong> for communication.</li>
+<li>Function as an <strong>Edge Computing Device</strong> at the station.</li>
+</ul>
+<h2 id="features-of-station-gateway">Features of Station Gateway</h2>
+<ul>
+<li><strong>Inbuilt Protocol Converters</strong>: Ensuring connectivity with:</li>
+<li>Datalogger</li>
+<li>IPS (Integrated Power Supply)</li>
+<li>Other equipment as referenced in clauses <strong>3.3 &amp; 4</strong> of this document.</li>
+<li><strong>Diagnostic Features</strong>: Allows monitoring and troubleshooting.</li>
+<li><strong>Configuration Capabilities</strong>: Details are provided in <strong>Annexure A &amp; B</strong>.</li>
+</ul>
 
 
 
