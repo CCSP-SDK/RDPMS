@@ -17,6 +17,55 @@ The **Station Gateway** is an embedded electronic unit deployed at each station 
 - Implements **data security measures** to prevent unauthorized access.
 - Complies with **TEC IoT Security Guidelines** and undergoes periodic cybersecurity audits.
 
+## Prerequisites 
+Before setting up a Station Gateway, certain components must already be in place to ensure seamless integration with the CCSP platform and other railway management systems. The following prerequisites must be met:
+```yaml
+- Cloud AE of vendor has already registered and is up and running.
+- RAILWAY_MGMT_AE has already registered and is up and running.
+- Railway-cloud-endpoint is pre-shared with OEMs.
+```
+
+### Configuration File
+- This file will be shared with the gateway vendor once the configuration of the station gateway is done at CCSP.
+- For details, refer to **Device Configuration Parameters**.
+- This configuration file will be mailed to the vendor.
+- It will be loaded by the OEM on their respective gateway.
+
+### MQTT Packet and MQTT Topics for Station Gateway
+
+#### MQTT Packet:
+- `<Client-Id>` (as a simple string)  
+  → ClientID will be set to the following format:  
+    - `<AE-ID>`
+- **Sample Connect Packet**
+![Sample Connect Packet](../../images/sample_connect_packet.png)
+
+#### Publish Topic:
+```yaml
+/oneM2M/reg_req/<Gateway-AE-ID>/<CSE-ID>/json
+/oneM2M/req/<Gateway-AE-ID>/<CSE-ID>/json
+```
+#### Topic to be Subscribed:
+```yaml
+/oneM2M/reg_resp/<Gateway-AE-ID>/<CSE-ID>/json
+/oneM2M/resp/<Gateway-AE-ID>/<CSE-ID>/json
+/oneM2M/req/<CSE-ID>/<Gateway-AE-ID>/json
+```
+
+### One-Time Resources to be Created by Station Gateway
+???+ tip "Resources"
+    ```yamal
+    - Station Gateway AE Registration Request
+    - Station Gateway Connect Container and Subscription
+    - Station Gateway Information Container and Subscription
+    - Station Gateway Parameter Container and Subscription
+    - Station Gateway Image Container and Subscription
+    - Station Gateway Diagnostics Container and Subscription
+    - Station Gateway Time Sync Container and Subscription
+    - Station Gateway Configuration Container and Subscription
+    - Station Gateway Time Sync Acknowledgement Container and Subscription
+    - Station Gateway Configuration Acknowledgement Container and Subscription
+    ```
 
 ## Conclusion
 
