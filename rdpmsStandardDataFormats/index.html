@@ -642,55 +642,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#data-flow-containers-in-ccsp-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      Data Flow &amp; Containers in CCSP Layer
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#payload-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payload Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Payload Specifications">
+    <nav class="md-nav" aria-label="Data Flow & Containers in CCSP Layer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diagnostic-payloads" class="md-nav__link">
+  <a href="#how-data-is-organized" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagnostic Payloads
+      How Data is Organized
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#predictive-maintenance-payloads" class="md-nav__link">
+  <a href="#bidirectional-communication" class="md-nav__link">
     <span class="md-ellipsis">
-      Predictive Maintenance Payloads
+      Bidirectional Communication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alert-payloads" class="md-nav__link">
+  <a href="#role-of-ccsp-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Alert Payloads
+      Role of CCSP Layer
     </span>
   </a>
   
@@ -702,37 +693,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#types-of-containers-in-standard-data-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Types of Containers in Standard Data Format
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+    <nav class="md-nav" aria-label="Types of Containers in Standard Data Format">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diagnostic-payload-example" class="md-nav__link">
+  <a href="#station-gateway-connect-container" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagnostic Payload Example
+      Station Gateway Connect Container:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#predictive-maintenance-payload-example" class="md-nav__link">
+  <a href="#station-gateway-information-container" class="md-nav__link">
     <span class="md-ellipsis">
-      Predictive Maintenance Payload Example
+      Station Gateway Information Container:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alert-payload-example" class="md-nav__link">
+  <a href="#registration-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Alert Payload Example
+      Registration Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnostic Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-sync-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Sync Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-sync-acknowledgment-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Sync Acknowledgment Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-acknowledgment-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Acknowledgment Container:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#station-gateway-status-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Station Gateway Status Container:
     </span>
   </a>
   
@@ -744,18 +807,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resources
+      Key Takeaways
     </span>
   </a>
   
@@ -778,84 +832,95 @@
 
 
 <h1 id="rdpms-standard-data-formats">RDPMS Standard Data Formats</h1>
-<p>Welcome to the RDPMS Standard Data Formats documentation. This page provides an overview of the various payload formats used within the RDPMS system for remote diagnostic and predictive maintenance solutions.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="overview">Overview</h2>
+<p>This page provides an overview of the various payload formats used within the <strong>RDPMS system</strong>. It follows <strong>oneM2M standard data formats</strong> to ensure <strong>interoperability</strong> between Station Gateways, IoT devices, sensors, and Application Software. These standards enable seamless communication between application software of different OEMs.</p>
+<details class="question" open="open">
+<summary>Why oneM2M Standards?</summary>
+<p>The <strong>oneM2M standard</strong> ensures a unified framework for IoT/M2M communication, making sure different devices and software solutions from multiple vendors can work together without compatibility issues.</p>
+</details>
+<p><strong>Note</strong>: Vendors should acquire a basic understanding of <strong>oneM2M standards</strong>. <a href="https://coi.cdot.in/docs/oneM2MGuideline.html">Refer to oneM2M Guidelines</a>.</p>
+<h2 id="data-flow-containers-in-ccsp-layer">Data Flow &amp; Containers in CCSP Layer</h2>
+<h3 id="how-data-is-organized">How Data is Organized</h3>
+<p>The <strong>CCSP Layer</strong> (C-DOT Common Service Platform) organizes data using <strong>containers</strong>. These containers act as storage units where <strong>data instances</strong> are managed.</p>
+<details class="tip" open="open">
+<summary>Container Data Flow</summary>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#payload-specifications">Payload Specifications</a></li>
-<li><a href="#examples">Examples</a></li>
-<li><a href="#best-practices">Best Practices</a></li>
-<li><a href="#resources">Resources</a></li>
+<li><strong>Containers</strong> are created by the <strong>Station Gateway</strong> in the CCSP Layer.</li>
+<li><strong>Data Instances</strong> are sent by the <strong>Station Gateway</strong> to these containers.</li>
+<li><strong>Applications &amp; Other Entities</strong> subscribe to these containers to receive notifications when new data instances are added.</li>
 </ul>
-<h2 id="introduction">Introduction</h2>
-<p>The RDPMS (Remote Diagnostic Predictive Maintenance Solutions) system utilizes specific payload formats to ensure consistency, reliability, and efficiency in data processing and management. This documentation outlines these formats and provides guidelines for their usage.</p>
-<h2 id="payload-specifications">Payload Specifications</h2>
-<h3 id="diagnostic-payloads">Diagnostic Payloads</h3>
-<p>Details about the structure and content of diagnostic payloads.</p>
-<h3 id="predictive-maintenance-payloads">Predictive Maintenance Payloads</h3>
-<p>Details about the structure and content of predictive maintenance payloads.</p>
-<h3 id="alert-payloads">Alert Payloads</h3>
-<p>Details about the structure and content of alert payloads.</p>
-<h2 id="examples">Examples</h2>
-<h3 id="diagnostic-payload-example">Diagnostic Payload Example</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;deviceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-01T12:00:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;diagnosticData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nt">&quot;temperature&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;vibration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.02</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="predictive-maintenance-payload-example">Predictive Maintenance Payload Example</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;deviceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-01T12:00:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;maintenancePrediction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;component&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;motor&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;predictedFailureDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-12-01&quot;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="alert-payload-example">Alert Payload Example</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;deviceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-10-01T12:00:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;alertType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;alertLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="best-practices">Best Practices</h2>
+</details>
+<h3 id="bidirectional-communication">Bidirectional Communication</h3>
 <ul>
-<li>Ensure data consistency by adhering to the specified payload formats.</li>
-<li>Validate payloads to prevent errors during processing.</li>
-<li>Use appropriate data types for each field.</li>
+<li>The <strong>Application Software</strong> can also create data instances in certain containers.</li>
+<li>The <strong>Station Gateway</strong> subscribes to these containers and receives data instances as notifications.</li>
 </ul>
-<h2 id="resources">Resources</h2>
+<h3 id="role-of-ccsp-layer">Role of CCSP Layer</h3>
+<details class="info" open="open">
+<summary>Authentication &amp; Data Integrity</summary>
 <ul>
-<li><a href="https://www.json.org/json-en.html">JSON Documentation</a></li>
-<li><a href="#">RDPMS Official Documentation</a></li>
+<li>Ensures that <strong>only authenticated devices</strong> can send or receive data.</li>
+<li>Verifies that data follows <strong>oneM2M standard formats</strong> before forwarding it to RDPMS Application Software.</li>
 </ul>
-<p>For further assistance, please refer to the official RDPMS documentation or contact support.</p>
+</details>
+<h2 id="types-of-containers-in-standard-data-format">Types of Containers in Standard Data Format</h2>
+<details class="example" open="open">
+<summary>Different Containers</summary>
+<ul>
+<li>
+<h3 id="station-gateway-connect-container"><u><strong>Station Gateway Connect Container</strong></u>:</h3>
+<p>Created by the station gateway on the CCSP Layer, subscribed by the cloud app. It notifies the application software when a station gateway connects, reboots, or recovers from a power failure.</p>
+</li>
+<li>
+<h3 id="station-gateway-information-container"><u><strong>Station Gateway Information Container</strong></u>:</h3>
+<p>Created by the station gateway on the CCSP Layer, subscribed by the cloud app. It sends installation details and updates when sensors/IoT devices are added or removed. This occurs at least once a month and should be configurable.</p>
+</li>
+<li>
+<h3 id="registration-process"><u><strong>Registration Process</strong></u>:</h3>
+<p>An initial copy of information container data is uploaded by a railway admin via an Excel sheet. The application software cross-checks data received from the station gateway against the uploaded data and provides an error message if inconsistencies exist.</p>
+</li>
+<li>
+<h3 id="image-container"><u><strong>Image Container</strong></u>:</h3>
+<p>Created by the station gateway, subscribed by the cloud app. It provides a snapshot of all parameter values at a defined interval (default: 24 hours, configurable).</p>
+</li>
+<li>
+<h3 id="parameter-container"><u><strong>Parameter Container</strong></u>:</h3>
+<p>Created by the station gateway, subscribed by the cloud app. It sends data when: a parameter changes by ±2% in the last 5 seconds or specific parameters (e.g., voltage/current of certain equipment) are sampled every 20 ms over 5 seconds or a packet is sent every 5 seconds with these values.</p>
+</li>
+<li>
+<h3 id="diagnostic-container"><u><strong>Diagnostic Container</strong></u>:</h3>
+<p>Created by the station gateway, subscribed by the cloud app. It reports the health status of all sensors/IoT devices when a fault occurs or at a configurable interval (default: 12 hours).</p>
+</li>
+<li>
+<h3 id="time-sync-container"><u><strong>Time Sync Container</strong></u>:</h3>
+<p>Created and subscribed by the station gateway. The application software writes to it, sending a time synchronization request to the station gateway at first connection or at a configurable interval (default: 24 hours).</p>
+</li>
+<li>
+<h3 id="time-sync-acknowledgment-container"><u><strong>Time Sync Acknowledgment Container</strong></u>:</h3>
+<p>Created by the station gateway, subscribed by the cloud app. It sends an acknowledgment after the time sync process is completed.</p>
+</li>
+<li>
+<h3 id="configuration-container"><u><strong>Configuration Container</strong></u>:</h3>
+<p>Created and subscribed by the station gateway. The application software writes configuration updates, which are then received by the station gateway.</p>
+</li>
+<li>
+<h3 id="configuration-acknowledgment-container"><u><strong>Configuration Acknowledgment Container</strong></u>:</h3>
+<p>Created by the station gateway, subscribed by the cloud app. It sends an acknowledgment once a configuration update is processed.</p>
+</li>
+<li>
+<h3 id="station-gateway-status-container"><u><strong>Station Gateway Status Container</strong></u>:</h3>
+<p>Created by the CCSP Layer. The station gateway sends an initial content instance to inform CCSP that all containers have been created, allowing access control policies to be activated.</p>
+</li>
+</ul>
+</details>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>The <strong>RDPMS system</strong> uses <strong>oneM2M-compliant data formats</strong> to standardize railway IoT communication.</li>
+<li><strong>CCSP Layer</strong> plays a crucial role in <strong>device authentication</strong>, <strong>data integrity</strong>, and <strong>subscription-based data flow</strong>.</li>
+<li>Data can flow <strong>bidirectionally</strong> between Station Gateways and Application Software.</li>
+<li><strong>CCSP is hosted in the Railway Cloud</strong> for enhanced security and interoperability.</li>
+<li>The adoption of oneM2M standards enhances <strong>data security, interoperability, and reliability</strong> of RDPMS across multiple vendors and systems.</li>
+</ul>
 
 
 
