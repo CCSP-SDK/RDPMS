@@ -736,6 +736,81 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-packet-and-mqtt-topics-for-station-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT Packet and MQTT Topics for Station Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MQTT Packet and MQTT Topics for Station Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mqtt-packet" class="md-nav__link">
+    <span class="md-ellipsis">
+      MQTT Packet:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish Topic:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topic-to-be-subscribed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topic to be Subscribed:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-time-resources-to-be-created-by-station-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-Time Resources to be Created by Station Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
@@ -779,6 +854,68 @@
 <li>Implements <strong>data security measures</strong> to prevent unauthorized access.</li>
 <li>Complies with <strong>TEC IoT Security Guidelines</strong> and undergoes periodic cybersecurity audits.</li>
 </ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before setting up a Station Gateway, certain components must already be in place to ensure seamless integration with the CCSP platform and other railway management systems. The following prerequisites must be met:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud AE of vendor has already registered and is up and running.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RAILWAY_MGMT_AE has already registered and is up and running.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Railway-cloud-endpoint is pre-shared with OEMs.</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="configuration-file">Configuration File</h3>
+<ul>
+<li>This file will be shared with the gateway vendor once the configuration of the station gateway is done at CCSP.</li>
+<li>For details, refer to <strong>Device Configuration Parameters</strong>.</li>
+<li>This configuration file will be mailed to the vendor.</li>
+<li>It will be loaded by the OEM on their respective gateway.</li>
+</ul>
+<h3 id="mqtt-packet-and-mqtt-topics-for-station-gateway">MQTT Packet and MQTT Topics for Station Gateway</h3>
+<h4 id="mqtt-packet">MQTT Packet:</h4>
+<ul>
+<li><code>&lt;Client-Id&gt;</code> (as a simple string)<br />
+  → ClientID will be set to the following format:  <ul>
+<li><code>&lt;AE-ID&gt;</code></li>
+</ul>
+</li>
+<li><strong>Sample Connect Packet</strong>
+<img alt="Sample Connect Packet" src="../../images/sample_connect_packet.png" /></li>
+</ul>
+<h4 id="publish-topic">Publish Topic:</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">/oneM2M/reg_req/&lt;Gateway-AE-ID&gt;/&lt;CSE-ID&gt;/json</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="l l-Scalar l-Scalar-Plain">/oneM2M/req/&lt;Gateway-AE-ID&gt;/&lt;CSE-ID&gt;/json</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="topic-to-be-subscribed">Topic to be Subscribed:</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="l l-Scalar l-Scalar-Plain">/oneM2M/reg_resp/&lt;Gateway-AE-ID&gt;/&lt;CSE-ID&gt;/json</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="l l-Scalar l-Scalar-Plain">/oneM2M/resp/&lt;Gateway-AE-ID&gt;/&lt;CSE-ID&gt;/json</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="l l-Scalar l-Scalar-Plain">/oneM2M/req/&lt;CSE-ID&gt;/&lt;Gateway-AE-ID&gt;/json</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="one-time-resources-to-be-created-by-station-gateway">One-Time Resources to be Created by Station Gateway</h3>
+<details class="tip" open="open">
+<summary>Resources</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>- Station Gateway AE Registration Request
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>- Station Gateway Connect Container and Subscription
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>- Station Gateway Information Container and Subscription
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>- Station Gateway Parameter Container and Subscription
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>- Station Gateway Image Container and Subscription
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>- Station Gateway Diagnostics Container and Subscription
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>- Station Gateway Time Sync Container and Subscription
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>- Station Gateway Configuration Container and Subscription
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>- Station Gateway Time Sync Acknowledgement Container and Subscription
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>- Station Gateway Configuration Acknowledgement Container and Subscription
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="conclusion">Conclusion</h2>
 <details class="example" open="open">
 <summary>Quick Summary</summary>
